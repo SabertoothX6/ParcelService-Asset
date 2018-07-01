@@ -17,9 +17,9 @@ else
 	docker rm -f restgreen
 	#pull latest image from asser-server
 	docker pull asset.allgaeu-parcel-service.de:5000/parcelservice-server
-	#start Ãlatest image as restgreen
+	#start ï¿½latest image as restgreen
 	docker run -d --restart always --network=ParcelService --name=restgreen asset.allgaeu-parcel-service.de:5000/parcelservice-server
 	#Switch haproxy.cfg
-	docker exec -d proxy sh "haproxy -d -f /usr/local/etc/haproxy/proxyblue.cfg"
+	docker exec -d proxy sh "haproxy -d -f /usr/local/etc/haproxy/proxygreen.cfg"
 	echo "green" > status
 fi
